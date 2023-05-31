@@ -20,6 +20,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class AmazonLink {
 //ravichandrababu
 	//ravichandrababu
+	//test resources hello
 	public static void main(String[] args) throws EncryptedDocumentException, IOException, InterruptedException {
      WebDriverManager.chromedriver().setup();
      WebDriver driver=new ChromeDriver();
