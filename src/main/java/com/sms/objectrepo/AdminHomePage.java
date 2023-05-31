@@ -27,7 +27,7 @@ public class AdminHomePage {
 	@FindBy(xpath = "//span[text()='Subject Routing']") private WebElement subjectroutingbtn;
 	@FindBy(xpath = "//span[text()='Timetable']") private WebElement timetablebtn;
 	//remmber if we want to click any thing inside the student module 1st we have to click the student buttoon.
-	@FindBy(xpath = "//span[text()='Student']") private WebElement studentbtn;
+	@FindBy(xpath = "//i[@class='fa fa-graduation-cap']/following-sibling::span[normalize-space()='Student']") private WebElement studentbtn;
 	     @FindBy(xpath = "//a[contains(text(),'Add Student')]") private WebElement addstudentbtn;
 	     @FindBy(xpath = "//a[contains(text(),'All Student')]") private WebElement allstudentbtn;
 	     @FindBy(xpath = "//a[contains(text(),'Leave Student')]") private WebElement leavestudentbtn;
@@ -111,9 +111,10 @@ public class AdminHomePage {
 		return studentpaymentbtn;
 	}
 	public void studentModule(WebDriver driver,String whichbtn) {
+		wbu.elementClickablemethod(driver, studentbtn);
 		studentbtn.click();
 		if(whichbtn.equalsIgnoreCase("add student")) {
-			wbu.elementClickablemethod(driver, addstudentbtn);
+			wbu.explicitlywaitmethod(driver, addstudentbtn);
 			addstudentbtn.click();  
 			 }
 		else if(whichbtn.equalsIgnoreCase("all student")) {

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [Suite1]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="Test(failed)">
+    <classes>
+      <class name="testcasessms.TestCase01">
+        <methods>
+          <include name="creatingPettyCash"/>
+          <include name="opendataBase"/>
+          <include name="closeDatabase"/>
+          <include name="logoutToApp"/>
+          <include name="loginToApp"/>
+          <include name="pettycashApproval"/>
+          <include name="closeBrowser"/>
+          <include name="teacherCreationV"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- testcasessms.TestCase01 -->
+      <class name="testcasessms.TestCase02">
+        <methods>
+          <include name="opendataBase"/>
+          <include name="closeDatabase"/>
+          <include name="loginAsTeacher"/>
+          <include name="logoutToApp"/>
+          <include name="teacherCreationV"/>
+          <include name="loginToApp"/>
+          <include name="closeBrowser"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- testcasessms.TestCase02 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
